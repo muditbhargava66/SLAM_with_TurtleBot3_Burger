@@ -24,3 +24,47 @@ via the terminal by editing the ~/.bashrc script.
 
 The data_coll file contains the measured data of CPU performances, its plots, Python scripts for calculation of
 various metrics such as SSIM, RMSE, | R |, and | S | and a video of each methods run run.
+
+---
+
+## ROS 1 Compatibility Status
+
+> [!WARNING]
+> ### ROS 1 + Ubuntu 22.04 Compatibility Issues
+> This project was originally developed for **ROS Melodic (Python 2.7)**.  
+> Running it on **ROS Noetic + Ubuntu 22.04** currently introduces major compatibility and dependency issues.
+
+> [!CAUTION]
+> ### Known Problems
+> - Missing `gazebo_ros` and `urdf` package compatibility for Ubuntu 22.04
+> - Legacy Python 2 scripts inside `data_coll/` fail under Python 3
+> - Cartographer compilation issues on newer GCC/CMake toolchains
+> - Gazebo integration instability on modern ROS 1 environments
+
+> [!TIP]
+> ### Troubleshooting Guide
+> For detailed fixes, workarounds, and environment setup instructions, see:
+>
+> `ROS1_TROUBLESHOOTING.md`
+
+---
+
+## Project Modernization Roadmap
+
+> [!IMPORTANT]
+> ### Python 3 Migration
+> Refactored Python 3 compatible scripts are available inside:
+>
+> `data_coll/*_py3.py`
+
+> [!IMPORTANT]
+> ### ROS 2 Transition
+> This project is actively being migrated to:
+>
+> - **ROS 2 Humble**
+> - Native Ubuntu 22.04 support
+> - Modern Gazebo integration
+> - Updated dependency stack and tooling
+
+> [!NOTE]
+> The long-term goal is to fully deprecate legacy ROS Melodic/Python 2 dependencies.
